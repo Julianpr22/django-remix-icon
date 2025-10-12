@@ -58,7 +58,7 @@ Django Configuration
     urlpatterns = [
         path('admin/', admin.site.urls),
         # ... your other URLs
-        path('admin/remix-icon/', include('django_remix_icon.urls')),
+        path('remix-icon/', include('django_remix_icon.urls')),
     ]
 
 .. note::

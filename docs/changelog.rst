@@ -9,7 +9,7 @@ and this project adheres to `Semantic Versioning <https://semver.org/spec/v2.0.0
 [Unreleased]
 ------------
 
-[0.1.0] - 2024-01-XX
+[0.1.0] - 2025-01-XX
 --------------------
 
 Initial release of Django RemixIcon.
@@ -190,59 +190,6 @@ General Upgrade Process
 
 ---
 
-Known Issues
-============
-
-Version 0.1.0
--------------
-
-- Widget may not work properly in very old browsers (IE11 and below)
-- Large icon lists (1000+ icons) may have slight performance impact on slower devices
-- Inline forms with many icon fields may experience slower initialization
-
-**Workarounds:**
-
-- For old browser support, include polyfills for fetch() and Promise
-- For performance with large lists, consider limiting results or implementing pagination
-- For inline forms, consider using the simpler ``IconPreviewWidget`` for better performance
-
----
-
-Roadmap
-=======
-
-Planned Features
-----------------
-
-**Version 0.2.0 (Planned)**
-
-- Icon categories and filtering improvements
-- Custom icon upload support
-- Icon set configuration options
-- Performance optimizations
-- Enhanced keyboard shortcuts
-- Additional widget customization options
-
-**Version 0.3.0 (Planned)**
-
-- Icon size presets and standardization
-- Advanced search with fuzzy matching
-- Icon usage analytics and suggestions
-- REST API for icon management
-- Multi-language icon descriptions
-
-**Future Considerations**
-
-- Integration with other icon libraries (FontAwesome, etc.)
-- Icon animation support
-- Visual icon builder/editor
-- Icon accessibility improvements
-- Advanced caching strategies
-
----
-
-Support and Compatibility
-=========================
 
 Supported Versions
 ------------------

@@ -47,7 +47,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('admin/remix-icon/', include('django_remix_icon.urls')),
+    path('remix-icon/', include('django_remix_icon.urls')),
     # ... your other URLs
 ]
 ```
@@ -120,7 +120,7 @@ class MenuItemAdmin(admin.ModelAdmin):
 - [Quick Start Tutorial](https://django-remix-icon.readthedocs.io/en/latest/quickstart.html)
 - [Template Tags Reference](https://django-remix-icon.readthedocs.io/en/latest/template_tags.html)
 - [Customization Guide](https://django-remix-icon.readthedocs.io/en/latest/customization.html)
-- [API Documentation](https://django-remix-icon.readthedocs.io/en/latest/api/)
+- [API Documentation](https://django-remix-icon.readthedocs.io/en/latest/api/fields.html)
 
 ## 🎭 Template Tags
 
@@ -338,7 +338,6 @@ django-remix-icon/
 │   ├── static/            # CSS and JavaScript
 │   └── templates/         # Widget templates
 ├── docs/                  # Documentation
-└── examples/              # Usage examples
 ```
 
 ## 🎯 Philosophy
@@ -370,7 +369,7 @@ A: Yes, the widget is fully responsive and touch-friendly.
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ## 🙏 Acknowledgments
 

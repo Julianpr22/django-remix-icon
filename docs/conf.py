@@ -17,10 +17,10 @@ django.setup()
 
 # -- Project information -----------------------------------------------------
 project = 'Django RemixIcon'
-copyright = '2024, Django RemixIcon Contributors'
+copyright = '2025, Django RemixIcon Contributors'
 author = 'Django RemixIcon Contributors'
-release = '0.1.0'
-version = '0.1.0'
+release = '0.1.1'
+version = '0.1.1'
 
 # -- General configuration ---------------------------------------------------
 extensions = [

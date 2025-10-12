@@ -6,7 +6,7 @@ Django RemixIcon is released under the MIT License.
 MIT License
 -----------
 
-Copyright (c) 2024 Django RemixIcon Contributors
+Copyright (c) 2025 Django RemixIcon Contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

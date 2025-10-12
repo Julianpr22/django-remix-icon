@@ -310,7 +310,7 @@ Autocomplete Not Working
 .. code-block:: python
 
     # urls.py
-    path('admin/remix-icon/', include('django_remix_icon.urls')),
+    path('remix-icon/', include('django_remix_icon.urls')),
 
 2. Check JavaScript console for errors
 3. Verify CSRF configuration for AJAX requests

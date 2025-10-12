@@ -67,7 +67,7 @@ Include the package URLs in your project's URL configuration:
 
     urlpatterns = [
         # ... your other URLs
-        path('admin/remix-icon/', include('django_remix_icon.urls')),
+        path('remix-icon/', include('django_remix_icon.urls')),
     ]
 
 Contents
