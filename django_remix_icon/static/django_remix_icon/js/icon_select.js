@@ -56,6 +56,16 @@
         searchInput.addEventListener('input', function() {
             const query = this.value.trim();
 
+            // If search input is cleared, also clear the hidden input and preview
+            if (this.value === '') {
+                hiddenInput.value = '';
+                updatePreview('');
+
+                // Trigger change event for Django
+                const event = new Event('change', { bubbles: true });
+                hiddenInput.dispatchEvent(event);
+            }
+
             clearTimeout(searchTimeout);
             searchTimeout = setTimeout(function() {
                 performSearch(query);

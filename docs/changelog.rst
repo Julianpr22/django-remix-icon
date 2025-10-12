@@ -9,6 +9,16 @@ and this project adheres to `Semantic Versioning <https://semver.org/spec/v2.0.0
 [Unreleased]
 ------------
 
+[2.0.0] - 2025-10-12
+--------------------
+
+Fixed
+~~~~~
+
+**Widget:**
+
+- **IconField** - Fixed critical bug where clearing icon field value didn't save to database. When a user deleted the icon value from the search input and saved, the icon would remain in both the database and UI. The hidden input field (which Django uses to save data) was not being updated when the visible search input was cleared manually. Now properly clears both the hidden input and preview when the search field is emptied.
+
 [0.1.0] - 2025-01-XX
 --------------------
 

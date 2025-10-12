@@ -9,7 +9,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="django-remix-icon",
-    version="0.1.1",
+    version="2.0.0",
     author="Berkay Şen",
     author_email="brktrl@protonmail.ch",
     description="A simple Django package for integrating RemixIcon with Django admin and templates",
